@@ -23,7 +23,7 @@
 //   border-color: #f44336;
 // }
 
-document.querySelector("body").style.backgroundColor = "#EBECF0";
+document.querySelector("body");
 const inputRef = document.getElementById("validation-input");
 inputRef.addEventListener("blur", onBlurBorderColor);
 
