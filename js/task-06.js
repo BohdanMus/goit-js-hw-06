@@ -30,13 +30,8 @@ inputRef.addEventListener("blur", onBlurBorderColor);
 function onBlurBorderColor(event) {
   let inputValue = event.currentTarget.value.trim();
   if (inputValue.length === Number(inputRef.dataset.length)) {
-    const currentInvalidInput = document.querySelector(".invalid");
-    currentInvalidInput?.inputRef.classList.remove("invalid");
-    inputRef.classList.add("valid");
-  }
-  if (inputRef.value.length === 0) {
-    inputRef.classList.remove("valid");
     inputRef.classList.remove("invalid");
+    inputRef.classList.add("valid");
   }
   if (
     inputRef.value.length !== Number(inputRef.dataset.length) &&
@@ -44,5 +39,8 @@ function onBlurBorderColor(event) {
   ) {
     inputRef.classList.add("invalid");
   }
+  else {
+    inputRef.classList.add("valid");
+    inputRef.classList.remove("invalid");
+  }
 }
-// Є питяння! Чому коли в інпут спочатку написати 6 символів підсвічує зеленим а потім коли при першій помилці знову ввожу 6 символів світить червоним і видає помилку Uncaught TypeError: Cannot read properties of undefined (reading 'classList')

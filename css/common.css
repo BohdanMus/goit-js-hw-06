@@ -22,3 +22,26 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  height: 200px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.gallery>li:not(:last-child) {
+  margin-right: 30px;
+}

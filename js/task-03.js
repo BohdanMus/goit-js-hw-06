@@ -21,7 +21,7 @@ const images = [
 const galerryItem = ({ url, alt }) =>
   `<li><img src= "${url}" alt= "${alt}" width = 400 height = auto></li>`;
 
-const galleryMarkup = images.reduce((acc, item) => acc + galerryItem(item), []);
+const galleryMarkup = images.reduce((acc, item) => acc + galerryItem(item), "");
 
 const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
